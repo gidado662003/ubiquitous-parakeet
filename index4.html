@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <title>Frontend Mentor | Product preview card component</title>
+   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-size: 14px;
+    background-color: hsl(30, 38%, 92%);
+    
+}
+.container{
+    margin: 30px auto;
+    padding: 0 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    
+   
+}
+.row{
+    max-width: 500px;
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    border-radius:10px ;
+    border: 1px solid;
+    overflow: hidden; 
+}
+img{
+    max-width: 100%;
+    display: inherit;    
+}
+.left{
+    z-index: -1;    
+}
+.right{
+    padding: 20px;
+    width: 100;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color:  hsl(0, 0%, 100%);
+}
+button{
+    padding: 10px;
+    width: 100%;
+    background-color: hsl(158, 36%, 37%);
+    color: white;
+    border-radius: 10px;
+    border: none;
+    transition: background-color .3s ease;
+    box-shadow: 2px 6px 4px grey;
+}
+button:active{
+    transform: translateY(4px);
+    box-shadow: 2px 3px 4px grey;
+}
+button:hover{
+    background-color:hsl(212, 21%, 14%);
+}
+h1{
+    font-size: 34px;
+    line-height: 0.9em;
+    color: hsl(212, 21%, 14%);
+}
+h3{
+    line-height: 1em;
+}
+.price{
+    display: flex;
+    align-items: center;
+}
+
+.price .current{
+    font-size: 32px;
+    color: hsl(158, 36%, 37%);
+    padding-right: 25px;
+}
+.price .old{    
+    text-decoration: line-through;
+    color:hsl(228, 12%, 48%)
+}
+.perfume{
+    letter-spacing: 10px;
+    color: hsl(228, 12%, 48%);
+}
+p{
+    color:hsl(228, 12%, 48%);
+    line-height: 1.2em;
+    font-family: Fraunes;
+    
+}
+.attribution { 
+    font-size: 15px; 
+    text-align: center; 
+}
+.attribution a {
+     color: hsl(228, 45%, 44%);
+ }
+       /* MOBILE DEVICE */
+@media screen and (max-width:475px) {
+    .row{
+        grid-template-columns: auto;
+    }
+    img{
+        max-height: 300px;
+        width: 100%;
+        object-fit: cover;
+    }
+    .right{
+        display: block;
+    }
+    .price,h1,h3{
+        margin: 12px 0;
+    }
+    .row{
+        max-width: 400px;
+    }
+    
+}
+
+   </style>
+    
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+        <div class="left">
+            <img src="image-product-desktop.png" alt="">
+        </div>
+        <div class="right">
+            <p class="perfume">PERFUME</p>
+            <h1>Gabrielle Essence Eau De Parfum</h1>
+
+            <p>A floral, solar and voluptuous interpretation composed by Olivier Polge, 
+            Perfumer-Creator for the House of CHANEL.</p>
+
+           <div class="price">
+            <h3 class="current">$149.99</h3>
+            <h3 class="old">$169.99 </h3>
+    </div>
+            
+          
+            <button>🛒 Add to Cart</button>
+            </div>
+        </div>
+    </div>
+    <div class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+        Coded by <a href="#">Gidado Abdullateef</a>.
+        </div>
+    
+</body>
+</html>
